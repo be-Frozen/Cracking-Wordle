@@ -12,5 +12,5 @@ Furthermore, we have written a memorandum to the Puzzle Editor of the New York T
 
 **Key Words:** Prophet, Multilayer Perceptron, K-Means Clustering, Principle Components Analysis, Wordle, Prediction
 
-To be updated. Or you can see more details in the [PDF solution](https://github.com/be-Frozen/Cracking-Wordle/MCM_2023.pdf).
+To be updated. Or you can see more details in the [PDF solution](github.com/be-Frozen/Cracking-Wordle/blob/main/MCM_2023.pdf).
 
