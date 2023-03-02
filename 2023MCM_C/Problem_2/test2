@@ -1,0 +1,55 @@
+import pandas as pd
+import numpy as np
+from sklearn.preprocessing import MinMaxScaler
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import LSTM, Dense
+
+# 读取数据集
+data = pd.read_csv('Problem_C_Data_Wordle.csv')
+
+# 筛选出需要的属性作为输入
+input_features = ['words_frequency', 'ASCII Sum', 'Has Duplicate Letters', 'letter_frequency_mul', 'letter_frequency_sum']
+output_features = ['1_guess', '2_guess', '3_guess', '4_guess', '5_guess', '6_guess', '7_guess']
+
+x = data[input_features].values
+y = data[output_features].values
+
+# 数据标准化
+scaler_x = MinMaxScaler()
+scaler_y = MinMaxScaler()
+x_scaled = scaler_x.fit_transform(x)
+y_scaled = scaler_y.fit_transform(y)
+
+# 训练集、验证集、测试集的划分
+train_size = int(len(x) * 0.7)
+val_size = int(len(x) * 0.2)
+test_size = len(x) - train_size - val_size
+
+x_train = x_scaled[:train_size, :]
+y_train = y_scaled[:train_size, :]
+
+x_val = x_scaled[train_size:train_size+val_size, :]
+y_val = y_scaled[train_size:train_size+val_size, :]
+
+x_test = x_scaled[train_size+val_size:, :]
+y_test = y_scaled[train_size+val_size:, :]
+
+# 构建LSTM模型
+model = Sequential()
+model.add(LSTM(64, activation='relu', input_shape=(x_train.shape[1], 1)))
+model.add(Dense(7))
+model.compile(optimizer='adam', loss='mse')
+
+# 训练模型
+history = model.fit(x_train.reshape(x_train.shape[0], x_train.shape[1], 1), y_train,
+                    epochs=50, batch_size=32, validation_data=(x_val.reshape(x_val.shape[0], x_val.shape[1], 1), y_val), verbose=1)
+
+# 模型预测
+y_pred = model.predict(x_test.reshape(x_test.shape[0], x_test.shape[1], 1))
+y_pred = scaler_y.inverse_transform(y_pred)
+
+# 打印输出结果
+print('Predicted results: ')
+print(y_pred)
+print('Actual results: ')
+print(scaler_y.inverse_transform(y_test))
