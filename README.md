@@ -1,10 +1,10 @@
 # Cracking Wordle: Predicting Wordle Results
 
-A solution of the Problem C of 2023 MCM/ICM
+A Solution to the Problem C of 2023 MCM/ICM
 
-Wordle, a popular online word-guessing game, has attracted significant attention in the recent years. Players attempt to guess a five-letter word within six attempts and receive feedback after each guess. The game’s popularity has generated vast amounts of data, providing opportunities for statistical analysis and modeling. In this paper, we will present a comprehensive study of the Wordle game, focusing on predicting the number of reported results on a future date, the associated percentage of scores, and categorizing the difficulty of a word. 
+Wordle, a popular online word-guessing game, has attracted significant attention in recent years. Players attempt to guess a five-letter word within six attempts and receive feedback after each guess. The game’s popularity has generated vast amounts of data, providing statistical analysis and modeling opportunities. In this paper, we will present a comprehensive study of the Wordle game, focusing on predicting the number of reported results on a future date, the associated percentage of scores, and categorizing the difficulty of a word. 
 
-To predict future results, we have established three models: **Prophet, Multilayer Perceptron, and K-Means Clustering**. These models use characteristic values extracted from the word attributes to train and test their performance, and achieved a promising prediction effect, especially when in predicting the difficulty of guessing words, the accuracy reached nearly 90%. To ensure accuracy, we also designed an innovative algorithms called **Normal Distribution Principle Components Analysis**. 
+To predict future results, we have established three models: **Prophet, Multilayer Perceptron, and K-Means Clustering**. These models use characteristic values extracted from the word attributes to train and test their performance, and achieved a promising prediction effect, especially when predicting the difficulty of guessing words, the accuracy reached nearly 90%. To ensure accuracy, we also designed an innovative algorithm called **Normal Distribution Principle Components Analysis**. 
 
 Our models have demonstrated superior performance, strong robustness, and adaptability to different situations, as well as decent generalization ability. We have provided a detailed explanation of the results and accuracy of our models, which can help readers better understand the relationship between words and results. 
 
@@ -14,3 +14,4 @@ Furthermore, we have written a memorandum to the Puzzle Editor of the New York T
 
 To be updated. Or you can see more details in the [PDF solution](https://github.com/be-Frozen/Cracking-Wordle/blob/main/files/MCM_2023.pdf).
 
+We won a **Meritorious Winner** in 2023 MCM/ICM!
