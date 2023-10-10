@@ -1,17 +1,40 @@
 # Cracking Wordle: Predicting Wordle Results
 
-A Solution to the Problem C of 2023 MCM/ICM
+## Overview
 
-Wordle, a popular online word-guessing game, has attracted significant attention in recent years. Players attempt to guess a five-letter word within six attempts and receive feedback after each guess. The game’s popularity has generated vast amounts of data, providing statistical analysis and modeling opportunities. In this paper, we will present a comprehensive study of the Wordle game, focusing on predicting the number of reported results on a future date, the associated percentage of scores, and categorizing the difficulty of a word. 
+Wordle Predictor is a project that offers a comprehensive analysis and prediction of Wordle game results. Wordle is a popular online word-guessing game where players attempt to guess a five-letter word within six attempts. This project aims to predict the number of reported results on a future date, the associated percentage of scores, and categorize the difficulty of a word in the game.
 
-To predict future results, we have established three models: **Prophet, Multilayer Perceptron, and K-Means Clustering**. These models use characteristic values extracted from the word attributes to train and test their performance, and achieved a promising prediction effect, especially when predicting the difficulty of guessing words, the accuracy reached nearly 90%. To ensure accuracy, we also designed an innovative algorithm called **Normal Distribution Principle Components Analysis**. 
+We won a **Meritorious Winner** in the 2023 MCM/ICM competition!
 
-Our models have demonstrated superior performance, strong robustness, and adaptability to different situations, as well as decent generalization ability. We have provided a detailed explanation of the results and accuracy of our models, which can help readers better understand the relationship between words and results. 
+## Key Features
 
-Furthermore, we have written a memorandum to the Puzzle Editor of the New York Times to offer our assistance in improving the user experience. Our models have potential value in enhancing the game and benefiting its large player base. In conclusion, this paper offers a mature and professional analysis of predicting Wordle results. We hope that our research and models can serve as a valuable resource for future investigations and practical applications.
+- Predict future Wordle game results.
+- Categorize the difficulty of guessing words.
+- Three prediction models: Prophet, Multilayer Perceptron, and K-Means Clustering.
+- Innovative algorithm called Normal Distribution Principle Components Analysis for accuracy.
+- Detailed explanation of results and model accuracy.
 
-**Key Words:** Prophet, Multilayer Perceptron, K-Means Clustering, Principle Components Analysis, Wordle, Prediction
+## Usage
 
-To be updated. Or you can see more details in the [PDF solution](https://github.com/be-Frozen/Cracking-Wordle/blob/main/files/MCM_2023.pdf).
+To use Wordle Predictor, follow these steps:
 
-We won a **Meritorious Winner** in 2023 MCM/ICM!
+1. Clone the repository: `git clone https://github.com/your-username/wordle-predictor.git`
+3. Run the prediction models and analysis.
+
+Detailed usage instructions can be found in the project's documentation or PDF solution.
+
+## Models
+
+Wordle Predictor employs three models:
+
+1. **Prophet**: A forecasting tool.
+2. **Multilayer Perceptron**: A neural network model.
+3. **K-Means Clustering**: A clustering algorithm.
+
+These models use characteristic values extracted from word attributes to predict Wordle game results and difficulty.
+
+---
+
+**Note:** For more detailed information, analysis, and results, please refer to the PDF solution provided in the project.
+
+For any questions or inquiries, please contact [me](mailto:isguodong.chen@outlook.com).
